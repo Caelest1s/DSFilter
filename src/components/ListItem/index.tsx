@@ -2,6 +2,10 @@ import './style.css';
 
 export default function ListItem() {
     return (
-        <h1>List Items</h1>
+        <>
+            <div className="container-result-list">
+                <h1>List Items</h1>
+            </div>
+        </>
     );
 }
