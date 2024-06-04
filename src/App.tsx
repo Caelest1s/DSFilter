@@ -1,9 +1,15 @@
-import './App.css'
+import Filter from "./components/Filter"
+import HeaderClient from "./components/HeaderClient"
+import ListItem from "./components/ListItem"
 
 function App() {
 
   return (
-    <h1>Hello</h1>
+    <>
+      <HeaderClient />
+      <Filter />
+      <ListItem />
+    </>
   )
 }
 

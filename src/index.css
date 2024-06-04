@@ -1,6 +1,40 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Variable COLOR CSS */
+  --dsf-color-default-font: #FFFFFF;
+  --dsf-color-default-background: #FFFFFF;
+  /* Header */
+  --dsf-color-header-background: #55BC04;
+  --dsf-color-header-font: #FFFFFF;
+  /* Body */
+  --dsf-color-body-background: #C2C2C2;
+  /* Button */
+  --dsf-color-button-background: #55BC04;
+  --dsf-color-button-font: #FFFFFF;
+  /* Field Input */
+  --dsf-color-input-border: #C2C2C2;
+
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  color: var(--dsf-color-header-font);
+  background-color: var(--dsf-color-header-background);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--dsf-color-body-background);
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
