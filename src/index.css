@@ -12,7 +12,11 @@
   --dsf-color-button-font: #FFFFFF;
   /* Field Input */
   --dsf-color-input-border: #C2C2C2;
-
+  /* Font */
+  --dsf-color-font-output-item-name: #6F6F6F;
+  --dsf-color-font-output-item-value: #55BC04;
+  /* Border */
+  --dsf-color-border-result-list: #55BC04;
 }
 
 * {

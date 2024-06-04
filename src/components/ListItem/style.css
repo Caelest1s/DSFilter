@@ -1,5 +1,29 @@
 .container-result-list {
     width: 960px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: var(--dsf-color-default-background);
+}
+
+.dsf-output-item {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 53px;
+    padding: 10px;
+    border: 1px solid var(--dsf-color-border-result-list);
+    border-radius: 5px;
+    background-color: var(--dsf-color-default-background);
+}
+
+.dsf-output-item-name {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--dsf-color-font-output-item-name);
+}
+
+.dsf-output-item-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dsf-color-font-output-item-value);
 }
