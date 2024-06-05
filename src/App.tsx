@@ -1,14 +1,12 @@
-import Filter from "./components/Filter"
 import HeaderClient from "./components/HeaderClient"
-import ListItem from "./components/ListItem"
+import ListingBody from "./components/ListingBody"
 
 function App() {
 
   return (
     <>
       <HeaderClient />
-      <Filter />
-      <ListItem />
+      <ListingBody />
     </>
   )
 }
