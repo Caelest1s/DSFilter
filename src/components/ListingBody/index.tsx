@@ -14,18 +14,23 @@ export default function ListingBody() {
 
     const [products, setProducts] = useState<ProductDTO[]>(productService.listProduct);
 
-    const [formPrice, setFormPrice] = useState<FormPrice>({
+    const [price, setPrice] = useState<FormPrice>({
         min: 0,
         max: 1999
     });
 
     useEffect(() => {
-        setProducts(productService.findByPrice(formPrice.min, formPrice.max));
-    }, [formPrice.min, formPrice.max]);
+        setProducts(productService.findByPrice(price.min, price.max));
+    }, [price.min, price.max]);
+
+    function handleFilterPrice(prices: FormPrice) {
+        setPrice(prices);
+    }
 
     return (
         <>
-            <Filter />
+            {/* This view listining this event onFilter about of the method */}
+            <Filter onFilter={handleFilterPrice} />
             <div className="container-result-list">
                 {
                     products.map(

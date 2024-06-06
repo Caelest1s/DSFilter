@@ -6,7 +6,11 @@ type FormPrice = {
     max?: number;
 }
 
-export default function Filter() {
+type Props = {
+    onFilter: Function;
+}
+
+export default function Filter({ onFilter }: Props) {
 
     const [formPrice, setFormPrice] = useState<FormPrice>({
         min: undefined,
@@ -19,16 +23,18 @@ export default function Filter() {
         setFormPrice({ ...formPrice, [name]: value });
     }
 
-    function handleSubmitFilter(event: any) {
+    function handleSubmit(event: any) {
         // para não recarregar a página
         event.preventDefault();
         console.log(formPrice.min || 0);
         console.log(formPrice.max || Number.MAX_VALUE);
+        // throw the event
+        onFilter(formPrice);
     }
 
     return (
         <div className="dsc-filter">
-            <form onSubmit={handleSubmitFilter}>
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="Preço mínimo"
