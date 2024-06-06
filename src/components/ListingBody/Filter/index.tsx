@@ -18,17 +18,15 @@ export default function Filter({ onFilter }: Props) {
     });
 
     function handleInputChange(event: any) {
-        const value = event.target.value;
         const name = event.target.name;
+        const value = event.target.value;
         setFormPrice({ ...formPrice, [name]: value });
     }
 
     function handleSubmit(event: any) {
-        // para não recarregar a página
+        // don't reload page
         event.preventDefault();
-        console.log(formPrice.min || 0);
-        console.log(formPrice.max || Number.MAX_VALUE);
-        // throw the event
+        // throw the event of the view ListingBody
         onFilter(formPrice);
     }
 

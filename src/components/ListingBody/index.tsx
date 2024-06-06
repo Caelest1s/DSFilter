@@ -16,16 +16,21 @@ export default function ListingBody() {
 
     const [price, setPrice] = useState<FormPrice>({
         min: 0,
-        max: 1999
+        max: Number.MAX_VALUE
     });
 
     useEffect(() => {
-        setProducts(productService.findByPrice(price.min, price.max));
-    }, [price.min, price.max]);
+        setProducts(productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE));
+        console.log("min: " + price.min);
+        console.log("max: " + price.max);
+    }, [price]);
 
     function handleFilterPrice(prices: FormPrice) {
         setPrice(prices);
     }
+    console.log("length: " + products.length);
+    console.log("min: " + price.min);
+    console.log("max: " + price.max);
 
     return (
         <>
