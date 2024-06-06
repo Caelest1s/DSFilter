@@ -27,4 +27,5 @@ button {
     background-color: var(--dsf-color-button-background);
     border: 0;
     border-radius: 5px;
+    font-size: 16px;
 }

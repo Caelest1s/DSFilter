@@ -1,20 +1,25 @@
 :root {
   /* Variable COLOR CSS */
   --dsf-color-default-font: #FFFFFF;
-  --dsf-color-default-background: #FFFFFF;
+  /* --dsf-color-default-background: #FFFFFF; */
+  --dsf-color-default-background: #6B6E70;
   /* Header */
-  --dsf-color-header-background: #55BC04;
-  --dsf-color-header-font: #FFFFFF;
+  /* --dsf-color-header-background: #55BC04; */
+  --dsf-color-header-background: #474B4F;
+  /* --dsf-color-header-font: #FFFFFF; */
+  --dsf-color-header-font: #86FF32;
   /* Body */
-  --dsf-color-body-background: #C2C2C2;
+  /* --dsf-color-body-background: #C2C2C2; */
+  --dsf-color-body-background: #222629;
   /* Button */
+  /* --dsf-color-button-background: #55BC04; */
   --dsf-color-button-background: #55BC04;
   --dsf-color-button-font: #FFFFFF;
   /* Field Input */
   --dsf-color-input-border: #C2C2C2;
   /* Font */
-  --dsf-color-font-output-item-name: #6F6F6F;
-  --dsf-color-font-output-item-value: #55BC04;
+  --dsf-color-font-output-item-name: #FFFFFF;
+  --dsf-color-font-output-item-value: #FFFFFF;
   /* Border */
   --dsf-color-border-result-list: #55BC04;
 }

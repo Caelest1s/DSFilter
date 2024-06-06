@@ -16,11 +16,11 @@ export default function Filter() {
     function handleInputChange(event: any) {
         const value = event.target.value;
         const name = event.target.name;
-
         setFormPrice({ ...formPrice, [name]: value });
     }
 
     function handleSubmitFilter(event: any) {
+        // para não recarregar a página
         event.preventDefault();
         console.log(formPrice.min || 0);
         console.log(formPrice.max || Number.MAX_VALUE);
@@ -30,19 +30,21 @@ export default function Filter() {
         <div className="dsc-filter">
             <form onSubmit={handleSubmitFilter}>
                 <input
-                    name="min"
-                    value={formPrice.min || ""}
                     type="text"
                     placeholder="Preço mínimo"
+                    // mesmo nome da variável (min)
+                    name="min"
+                    value={formPrice.min || ""}
                     onChange={handleInputChange}
                 /><br />
                 <input
-                    name="max"
-                    value={formPrice.max || ""}
+                    // mesmo nome da variável (max)
                     type="text"
                     placeholder="Preço máximo"
-                    className="mt-20"
+                    name="max"
+                    value={formPrice.max || ""}
                     onChange={handleInputChange}
+                    className="mt-20"
                 /><br />
 
                 <button className="mt-20" type="submit"> Filtrar </button>
