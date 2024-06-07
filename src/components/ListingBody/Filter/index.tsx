@@ -36,13 +36,13 @@ export default function Filter({ onFilter }: Props) {
                 <input
                     type="text"
                     placeholder="Preço mínimo"
-                    // mesmo nome da variável (formPrice."min")
+                    // equals var name (formPrice."min")
                     name="min"
                     value={formPrice.min || ""}
                     onChange={handleInputChange}
                 /><br />
                 <input
-                    // mesmo nome da variável (formPrice."max")
+                    // equals var name (formPrice."max")
                     type="text"
                     placeholder="Preço máximo"
                     name="max"

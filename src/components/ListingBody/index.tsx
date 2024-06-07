@@ -23,18 +23,18 @@ export default function ListingBody() {
     const { setContextCountItem } = useContext(ContextCountItem);
 
     useEffect(() => {
-        setProducts(productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE));
-
+        const listProducts = productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE);
+        setProducts(listProducts);
+        setContextCountItem(listProducts.length);
     }, [price]);
 
     function handleFilterPrice(prices: FormPrice) {
         setPrice(prices);
-        setContextCountItem(products.length);
     }
 
     return (
         <>
-            {/* This view listining this event onFilter about of the method */}
+            {/* This view listining this event onFilter through the method */}
             <Filter onFilter={handleFilterPrice} />
             <div className="container-result-list">
                 {

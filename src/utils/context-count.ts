@@ -7,6 +7,6 @@ export type ContextCountItemType = {
 }
 
 export const ContextCountItem = createContext<ContextCountItemType>({
-    contextCountItem: 20,
+    contextCountItem: 0,
     setContextCountItem: () => { }
 });

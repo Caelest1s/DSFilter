@@ -9,7 +9,6 @@ export default function App() {
 
   return (
     <ContextCountItem.Provider value={{ contextCountItem, setContextCountItem }}>
-
       <HeaderClient />
       <ListingBody />
     </ContextCountItem.Provider>
