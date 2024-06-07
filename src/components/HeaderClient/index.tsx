@@ -10,7 +10,12 @@ export default function HeaderClient() {
         <header className='dsc-header'>
             <div className='dsc-header-title'>
                 <div className='dsc-main-title'>DSFilter</div>
-                <div className="dsc-title-product">Produto(s) {contextCountItem}</div>
+                {
+                    contextCountItem > 0 &&
+                    <div className="dsc-title-product">
+                        {contextCountItem} Produto(s)
+                    </div>
+                }
             </div>
         </header>
     );

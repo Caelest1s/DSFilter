@@ -36,14 +36,17 @@ export default function ListingBody() {
         <>
             {/* This view listining this event onFilter through the method */}
             <Filter onFilter={handleFilterPrice} />
-            <div className="container-result-list">
-                {
-                    products.map(
-                        product =>
-                            <ListItem key={product.id} product={product} />
-                    )
-                }
-            </div>
+            {
+                products.length > 0 &&
+                <div className="container-result-list">
+                    {
+                        products.map(
+                            product =>
+                                <ListItem key={product.id} product={product} />
+                        )
+                    }
+                </div>
+            }
         </>
     )
 }
