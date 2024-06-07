@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductDTO } from "../../models/product";
 import * as productService from '../../services/product-service';
+import { ContextCountItem } from "../../utils/context-count";
 import Filter from "./Filter";
 import ListItem from "./ListItem";
 import './style.css';
@@ -19,12 +20,16 @@ export default function ListingBody() {
         max: Number.MAX_VALUE
     });
 
+    const { setContextCountItem } = useContext(ContextCountItem);
+
     useEffect(() => {
         setProducts(productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE));
+
     }, [price]);
 
     function handleFilterPrice(prices: FormPrice) {
         setPrice(prices);
+        setContextCountItem(products.length);
     }
 
     return (
