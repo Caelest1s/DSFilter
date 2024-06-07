@@ -23,9 +23,9 @@ export default function ListingBody() {
     const { setContextCountItem } = useContext(ContextCountItem);
 
     useEffect(() => {
-        const listProducts = productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE);
-        setProducts(listProducts);
-        setContextCountItem(listProducts.length);
+        const filterProducts = productService.findByPrice(price.min || 0, price.max || Number.MAX_VALUE);
+        setProducts(filterProducts);
+        setContextCountItem(filterProducts.length);
     }, [price]);
 
     function handleFilterPrice(prices: FormPrice) {
